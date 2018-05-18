@@ -1,0 +1,39 @@
+<h1>Burger WORLD!</h1>
+
+<h2>Burger Casualties</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            {{> burger-block devoured=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Only the strong BURGERS remain</h2>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            {{> burger-block devoured=false}}
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="burger">Burger Name: </label>
+        <input type="text"  id="burgerText" name="name">
+    </div>
+
+    {{!-- <div class="form-group">
+        <label for="">Still Hungry?</label><br>
+        <input type="radio" name="devoured">
+        <input type="radio" name="devoured">
+    </div> --}}
+
+    <button type="submit" id="addBurger">Add Burger</button>
+</form>
