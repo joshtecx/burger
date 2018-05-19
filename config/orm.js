@@ -58,12 +58,14 @@ const orm = {
         });
    },
    updateOne: (table, objColVals, condition, cb) => {
-        let queryString = "UPDATE " + table;
+        // let queryString = "UPDATE " + table;
 
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
+        // queryString += " SET ";
+        // queryString += objToSql(objColVals);
+        // queryString += " WHERE ";
+        // queryString += condition;
+
+        const queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`;
 
         console.log(queryString);
         connection.query(queryString, (err, result) => {

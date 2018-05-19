@@ -1,13 +1,15 @@
-$(() => {
-    $(".devour-it").on("click", (event) => {
-        const id = $(this).data("id");
-        const devoured = {
-            devoured: 1
+$(function () {
+    $(".devour-it").on("click", function (event) {
+        let id = $(this).data("id");
+        // let devouredBurger = $(this).data("devouredBurger");
+        let isDevoured = {
+            devoured: '1'
         };
+        console.log(isDevoured);
 
         $.ajax("/api/burgers/" + id, {
             method: "PUT",
-            data: devoured
+            data: isDevoured
         }).then( () => {
             console.log("YOU DEVOURED IT!");
             location.reload();

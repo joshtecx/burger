@@ -1,9 +1,14 @@
 h1 {
     text-align: center;
     padding: 20px;
+    /* background: #fff; */
+    /* width: 75%; */
     color: green;
 }
 
 body {
     color: blue;
+    /* background-image: url("../img/gucci.jpg"); */
+    /* background-repeat: no-repeat; */
 }
+
