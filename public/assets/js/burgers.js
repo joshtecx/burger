@@ -6,7 +6,7 @@ $(() => {
         };
 
         $.ajax("/api/burgers/" + id, {
-            type: "PUT",
+            method: "PUT",
             data: devoured
         }).then( () => {
             console.log("YOU DEVOURED IT!");
@@ -14,7 +14,7 @@ $(() => {
         });
     });
 
-    $("#addBurger").on("click", () => {
+    $("#add-burger").on("click", () => {
         event.preventDefault();
         console.log("click");
 
@@ -24,7 +24,7 @@ $(() => {
         };
 
         $.ajax("/api/burgers", {
-            type: "POST",
+            method: "POST",
             data: newBurger
         }).then(() => {
             console.log("NEW BURGER ON THE MENU");
