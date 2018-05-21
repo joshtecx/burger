@@ -1,14 +1,35 @@
 h1 {
     text-align: center;
     padding: 20px;
-    /* background: #fff; */
+    background: rgba(83, 76, 76, 0.7);
     /* width: 75%; */
-    color: green;
+    color: gold;
 }
 
 body {
-    color: blue;
-    /* background-image: url("../img/gucci.jpg"); */
-    /* background-repeat: no-repeat; */
+    color: black;
+    background-image: url("../img/gucci2.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.remainingBurgers {
+    background: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    padding: 20px;
+    float: left;
+}
+
+.eatenBurgers{
+    background: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    padding: 20px;
+    float: left;
+}
+
+.addBurger {
+    background: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    padding: 20px;
+    float: left;
+}
