@@ -22,11 +22,10 @@ router.post("/api/burgers", (req, res) => {
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
     // console.log(req.body.devoured);
-    const table = 'burgers';
-    
+
     // console.log("condition", condition);
 
-    burger.updateOne(table, req.body.devoured, condition, (result) => {
+    burger.updateOne(condition, (result) => {
         if(result.changedRows === 0) {
             return res.status(404).end();
         } else {
